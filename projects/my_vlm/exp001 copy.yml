@@ -42,4 +42,4 @@ model_config:
     task_type: CAUSAL_LM
 
 dataset_config_path:
-  - ./configs/datasets/m3it-smol.yaml
+  - ./configs/datasets/m3it_ipc.yaml
