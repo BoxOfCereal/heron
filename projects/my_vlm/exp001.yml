@@ -21,7 +21,7 @@ model_config:
   pretrained_path: # None or path to model weight
   model_type: git_llm
   language_model_name: facebook/opt-125m #facebook/opt-350m
-  vision_model_name: openai/clip-vit-base-patch16
+  vision_model_name: wkcn/TinyCLIP-ViT-8M-16-Text-3M-YFCC15M #openai/clip-vit-base-patch16
   num_image_with_embedding: 1 # if 1, no img_temporal_embedding
   max_length: 2048
   keys_to_finetune:
