@@ -9,9 +9,9 @@ training_config:
   logging_steps: 100
   evaluation_strategy: "steps"
   save_strategy: "steps"
-  eval_steps: 4000
-  save_steps: 4000
-  save_total_limit: 1
+  eval_steps: 200
+  save_steps: 200
+  save_total_limit: 2
   deepspeed: ./configs/deepspeed/ds_config_zero1.json
   output_dir: ./output/
   report_to: "wandb"
@@ -20,10 +20,10 @@ model_config:
   fp16: true
   pretrained_path: # None or path to model weight
   model_type: git_llm
-  language_model_name: facebook/opt-350m
+  language_model_name: facebook/opt-125m #facebook/opt-350m
   vision_model_name: openai/clip-vit-base-patch16
   num_image_with_embedding: 1 # if 1, no img_temporal_embedding
-  max_length: 512
+  max_length: 2048
   keys_to_finetune:
     - visual_projection
     - num_image_with_embedding
@@ -42,4 +42,4 @@ model_config:
     task_type: CAUSAL_LM
 
 dataset_config_path:
-  - ./configs/datasets/m3it_ipc.yaml
+  - ./configs/datasets/vg_datasets.yaml

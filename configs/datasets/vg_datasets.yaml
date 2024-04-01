@@ -1,0 +1,3 @@
+dataset_type: vg
+dataset_names:
+  - smw_10k
